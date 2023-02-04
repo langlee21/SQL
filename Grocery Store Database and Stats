@@ -1,0 +1,21 @@
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, color TEXT, price INTEGER, aisle INTEGER);
+
+INSERT INTO clothing VALUES (1, "Shirt", "Black","15", "1");
+INSERT INTO clothing VALUES (2, "Pants", "Neutral", "25", "2");
+INSERT INTO clothing VALUES (3, "Dresses", "Bright", "25", "3");
+INSERT INTO clothing VALUES (4, "Jeans", "Black", "30", "4");
+
+SELECT * FROM clothing;
+
+/* What is the most expensive? */
+SELECT * FROM clothing WHERE price > 25;
+
+/* What is the cheapest? */
+SELECT * FROM clothing WHERE price < 25;
+
+/*Where is the Dark Clothing? */
+SELECT * FROM clothing WHERE color = "black";
+
+SELECT MAX(price) as most_dollars_paid FROM clothing;
+
+SELECT SUM(price) as Sum_dollars_paid FROM clothing;
